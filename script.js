@@ -15,11 +15,11 @@ submitButton = document.getElementById("submitButton")
 // })
 
 
-submitButton.addEventListener('click',(event)=>{
+submitButton.addEventListener('click', (event) => {
     alert('button clicked')
     event.preventDefault()
     alert('default prevented')
-    if(username.validity.tooShort) {
+    if(username.validity.valueMissing) {
         alert('if is TRUE')
         usernameError.textContent = "Username cannot be blank"
         return

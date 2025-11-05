@@ -8,12 +8,19 @@ confirmPassword = document.getElementById("confirmPassword")
 confirmPasswordError = document.getElementById("confirmPasswordError")
 submitButton = document.getElementById("submitButton")
 
-// username.addEventListener('input',(event)=>{
-//     if(username.validity.tooShort) {
-//         usernameError.textContent = "Username cannot be blank"
-//     }
-// })
+username.addEventListener('input',(event)=>{
+    event.preventDefault()
+    if(username.validity.valueMissing) {
+        usernameError.textContent = "Username cannot be blank"
+    }
+})
 
+username.addEventListener('blur',(event)=>{
+    event.preventDefault()
+    if(username.validity.valueMissing) {
+        usernameError.textContent = "Username cannot be blank"
+    }
+})
 
 submitButton.addEventListener('click', (event) => {
     alert('button clicked')

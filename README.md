@@ -18,8 +18,7 @@ Click the Sign Up button
 
 ## Reflection Questions
 > How did event.preventDefault() help in handling form submission?
-
-
+event.preventDefault() does not allow the form to submit or refresh, which is desirable when not all input fields are valid.
 <br>
 
 > What is the difference between using HTML5 validation attributes and JavaScript-based validation? Why might you use both?

@@ -9,16 +9,18 @@ confirmPasswordError = document.getElementById("confirmPasswordError")
 submitButton = document.getElementById("submitButton")
 
 username.addEventListener('input',(event)=>{
-    event.preventDefault()
     if(username.validity.valueMissing) {
         usernameError.textContent = "Username cannot be blank"
+    } else {
+        usernameError.textContent = ""
     }
 })
 
 username.addEventListener('blur',(event)=>{
-    event.preventDefault()
     if(username.validity.valueMissing) {
         usernameError.textContent = "Username cannot be blank"
+    } else {
+        usernameError.textContent = ""
     }
 })
 
